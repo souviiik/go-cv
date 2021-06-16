@@ -3,7 +3,7 @@ import React from "react";
 export default function PersonalDetails() {
   return (
     <div>
-      <h2>Personal Details</h2>
+      <h2 class="title is-2">Personal Details</h2>
       <ul>
         <li>Name</li>
         <li>Address</li>

@@ -3,7 +3,7 @@ import React from 'react'
 export default function Experience() {
   return (
     <div>
-      <h2>Experience</h2>
+      <h2 class="title is-2">Experience</h2>
       <ul>
         <li>Company Name</li>
         <li>Designation</li>

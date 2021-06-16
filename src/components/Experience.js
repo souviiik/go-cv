@@ -1,9 +1,10 @@
-import React from 'react'
+import React from "react";
+import H2 from "./common/H2";
 
 export default function Experience() {
   return (
     <div>
-      <h2 class="title is-2">Experience</h2>
+      <H2 text="Experience" />
       <ul>
         <li>Company Name</li>
         <li>Designation</li>
@@ -12,5 +13,5 @@ export default function Experience() {
         <li>Roles and Responsibilities</li>
       </ul>
     </div>
-  )
+  );
 }

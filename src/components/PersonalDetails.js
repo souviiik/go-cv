@@ -1,9 +1,10 @@
 import React from "react";
+import H2 from "./common/H2";
 
 export default function PersonalDetails() {
   return (
     <div>
-      <h2 class="title is-2">Personal Details</h2>
+      <H2 text="Personal Details" />
       <ul>
         <li>Name</li>
         <li>Address</li>

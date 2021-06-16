@@ -1,9 +1,10 @@
 import React from "react";
+import H2 from "./common/H2";
 
 export default function Education() {
   return (
     <div>
-      <h2 class="title is-2">Education</h2>
+      <H2 text="Education" />
       <ul>
         <li>Course / Degree</li>
         <li>School / University</li>

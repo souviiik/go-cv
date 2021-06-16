@@ -11,7 +11,7 @@ export default function Education() {
         <li>Score</li>
         <li>Passing Year</li>
       </ul>
-      <button>Add</button>
+      <button className="button is-success"><i className="fas fa-plus"></i> Add</button>
     </div>
   );
 }

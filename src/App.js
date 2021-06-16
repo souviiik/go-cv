@@ -12,9 +12,9 @@ import Interests from "./components/Interests";
 import AdditionalInfo from "./components/AdditionalInfo";
 import Reference from "./components/Reference";
 import Signature from "./components/Signature";
+import Buttons from "./components/common/Buttons";
 
 function App() {
-  const MAX_STEPS = 13;
   const [steps, setSteps] = useState({
     prev: -1,
     curr: 0,
@@ -37,6 +37,10 @@ function App() {
     }));
   };
 
+  const handleSave = () => {
+    alert("Finally");
+  };
+
   const { prev, curr, next } = steps;
 
   return (
@@ -55,22 +59,13 @@ function App() {
       {curr === 11 && <Reference />}
       {curr === 12 && <Signature />}
 
-      <hr className="my-5" />
-      <div className="buttons">
-        <button disabled={prev === -1} className="button bd-pagination-prev" onClick={handlePrev}>
-          Back
-        </button>
-        <p>
-          step {next} of {MAX_STEPS}
-        </p>
-        <button
-          disabled={MAX_STEPS === next}
-          className="button is-link bd-pagination-next"
-          onClick={handleNext}
-        >
-          Save & Continue
-        </button>
-      </div>
+      <Buttons
+        prev={prev}
+        next={next}
+        handlePrev={handlePrev}
+        handleNext={handleNext}
+        handleSave={handleSave}
+      />
     </div>
   );
 }

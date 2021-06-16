@@ -34,6 +34,7 @@ function App() {
       {curr === 0 && <PersonalDetails />}
       {curr === 1 && <Education />}
       {curr === 2 && <Experience />}
+      <hr className="my-5" />
       <div className="buttons">
         <button disabled={prev === -1} className="button" onClick={handlePrev}>
           Back

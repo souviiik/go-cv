@@ -29,6 +29,7 @@ ReactDOM.render(
             <Resume />
           </Route>
         </Switch>
+        <div class="is-clearfix"></div>
         <Footer />
       </Router>
     </Provider>

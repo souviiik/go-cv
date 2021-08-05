@@ -9,7 +9,7 @@ export default function Cards({ name, path, image }) {
     <div className="column">
       <div className="card">
         <div className="card-image">
-          <figure className="image">
+          <figure className="image is-2by3">
             <img src={images[image]} alt={`${name} image`} />
           </figure>
         </div>

@@ -31,7 +31,7 @@ const ResumeTemplates = () => {
       <h2 className="title is-size-2">Select a Resume Template</h2>
       <div className="columns">
         {templates.map((template) => (
-          <Cards {...template} />
+          <Cards {...template} key={template.path} />
         ))}
       </div>
     </div>

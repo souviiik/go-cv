@@ -1,18 +1,31 @@
-import React from "react";
+import { StrictMode } from "react";
 import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+
 import "bulma/css/bulma.css";
-import "./index.css";
+
 import App from "./App";
-import reportWebVitals from "./reportWebVitals";
+import store from "./store";
+import ResumeTemplates from "./components/ResumeTemplates";
+import Header from "./components/common/Header";
 
+const rootElement = document.getElementById("root");
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById("root")
+  <StrictMode>
+    <Provider store={store}>
+      <Router>
+        <Header />
+        <Switch>
+          <Route exact={true} path="/">
+            <App />
+          </Route>
+          <Route path="/resume-templates">
+            <ResumeTemplates />
+          </Route>
+        </Switch>
+      </Router>
+    </Provider>
+  </StrictMode>,
+  rootElement
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

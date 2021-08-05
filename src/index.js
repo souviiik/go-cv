@@ -10,6 +10,7 @@ import store from "./store";
 import ResumeTemplates from "./components/ResumeTemplates";
 import Header from "./components/common/Header";
 import Footer from "./components/common/Footer";
+import Resume from "./components/ResumeTemplates/Resume";
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
@@ -23,6 +24,9 @@ ReactDOM.render(
           </Route>
           <Route path="/resume-templates">
             <ResumeTemplates />
+          </Route>
+          <Route path="/resume/:name">
+            <Resume />
           </Route>
         </Switch>
         <Footer />

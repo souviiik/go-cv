@@ -9,6 +9,7 @@ import App from "./App";
 import store from "./store";
 import ResumeTemplates from "./components/ResumeTemplates";
 import Header from "./components/common/Header";
+import Footer from "./components/common/Footer";
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
@@ -24,6 +25,7 @@ ReactDOM.render(
             <ResumeTemplates />
           </Route>
         </Switch>
+        <Footer />
       </Router>
     </Provider>
   </StrictMode>,

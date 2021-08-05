@@ -5,8 +5,8 @@ import "./Header.css";
 const Header = () => {
   return (
     <div className="container">
-      <h1 className="title is-size-1 mb-0">Freesume</h1>
-      <p>Free Resume Builder</p>
+      <h1 className="title is-size-1">Freesume</h1>
+      <p className="subtitle">Free Resume Builder</p>
       <hr />
       <div id="MainNavigation" className="navbar-menu">
         <div className="navbar-start">

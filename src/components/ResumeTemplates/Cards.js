@@ -6,7 +6,7 @@ import * as images from "../../assets";
 export default function Cards({ name, path, image }) {
   console.log(`images`, images);
   return (
-    <div className="column">
+    <div className="column is-one-quarter">
       <div className="card">
         <div className="card-image">
           <figure className="image is-2by3">
@@ -19,7 +19,10 @@ export default function Cards({ name, path, image }) {
               <p className="title is-4">{name}</p>
             </div>
           </div>
-          <Link className="button is-link is-fullwidth" to={`/resume/${path}`}>
+          <Link
+            className="button is-link is-fullwidth"
+            to={`/resume-template/${path}`}
+          >
             Select
           </Link>
         </div>

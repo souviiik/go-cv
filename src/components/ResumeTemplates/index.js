@@ -7,21 +7,21 @@ const templates = [
     image: "candid",
     path: "candid",
   },
-  {
-    name: "Yellow",
-    image: "yellow",
-    path: "yellow",
-  },
-  {
-    name: "Elegant",
-    image: "elegant",
-    path: "elegant",
-  },
-  {
-    name: "Corporate 1",
-    image: "corp1",
-    path: "corporate-1",
-  },
+  // {
+  //   name: "Yellow",
+  //   image: "yellow",
+  //   path: "yellow",
+  // },
+  // {
+  //   name: "Elegant",
+  //   image: "elegant",
+  //   path: "elegant",
+  // },
+  // {
+  //   name: "Corporate 1",
+  //   image: "corp1",
+  //   path: "corporate-1",
+  // },
 ];
 
 const ResumeTemplates = () => {

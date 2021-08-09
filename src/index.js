@@ -10,7 +10,7 @@ import store from "./store";
 import ResumeTemplates from "./components/ResumeTemplates";
 import Header from "./components/common/Header";
 import Footer from "./components/common/Footer";
-import Resume from "./components/ResumeTemplates/Resume";
+import Candid from "./components/ResumeTemplates/Candid";
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
@@ -25,8 +25,8 @@ ReactDOM.render(
           <Route path="/resume-templates">
             <ResumeTemplates />
           </Route>
-          <Route path="/resume/:name">
-            <Resume />
+          <Route path="/resume-template/candid">
+            <Candid />
           </Route>
         </Switch>
         <div class="is-clearfix"></div>

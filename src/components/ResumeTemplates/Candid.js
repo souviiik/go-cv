@@ -1,28 +1,40 @@
 import moment from "moment";
 import React from "react";
 import { FaPhoneAlt, FaRegEnvelope } from "react-icons/fa";
-import { useSelector } from "react-redux";
 
 import "./Candid.css";
 
-export default function Candid() {
-  const details = useSelector(({ details }) => details);
+export default function Candid({
+  personalDetails,
+  educationDetails,
+  experienceDetails,
+}) {
+  const {
+    name,
+    address,
+    jobTitle,
+    profile,
+    phone,
+    email,
+    dob,
+    maritalStatus,
+    nationality,
+    website,
+    github,
+    linkedin,
+  } = personalDetails;
 
   return (
     <>
       <div className="has-text-centered">
         <hr style={{ "border-top": "1px solid #1e1e1e" }} />
-        <h1 className="title is-size-1 mb-5 is-uppercase">
-          {details.personalDetails.name}
-        </h1>
-        <p className="subtitle is-size-5 has-text-black">
-          {details.personalDetails.jobTitle}
-        </p>
+        <h1 className="title is-size-1 mb-5 is-uppercase">{name}</h1>
+        <p className="subtitle is-size-5 has-text-black">{jobTitle}</p>
         <hr style={{ "border-top": "1px solid #1e1e1e" }} />
         <h2 className="title is-size-5 is-uppercase">Profile</h2>
         <div className="columns is-centered">
           <div className="column is-four-fifths">
-            <p>{details.personalDetails.profile}</p>
+            <p>{profile}</p>
           </div>
         </div>
         <hr style={{ "border-top": "1px solid #1e1e1e" }} />
@@ -34,11 +46,11 @@ export default function Candid() {
             <ul>
               <li>
                 <FaRegEnvelope className="mr-2" />
-                {details.personalDetails.email}
+                {email}
               </li>
               <li>
                 <FaPhoneAlt className="mr-2" />
-                {details.personalDetails.phone}
+                {phone}
               </li>
             </ul>
           </div>
@@ -47,7 +59,7 @@ export default function Candid() {
               Experiences
             </h2>
             <div>
-              {details.experienceDetails.map((exd) => (
+              {experienceDetails.map((exd) => (
                 <div className="mb-5 ">
                   <div className="has-text-centered">
                     <h3 className="title is-size-5 mb-3">

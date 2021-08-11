@@ -12,6 +12,7 @@ import Header from "./components/common/Header";
 import Footer from "./components/common/Footer";
 import ResumeBase from "./components/ResumeTemplates/ResumeBase";
 import { IconContext } from "react-icons/lib";
+import "./index.css";
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(

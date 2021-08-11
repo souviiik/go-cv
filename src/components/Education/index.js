@@ -4,6 +4,7 @@ import EducationFormPart from "./EducationFormPart";
 import { useSelector } from "react-redux";
 import { updateEducationDetails } from "../../actions/details.actions";
 import Buttons from "../Buttons";
+import { FaPlusCircle } from "react-icons/fa";
 
 export default function Education() {
   const educationDetailsFromStore = useSelector(
@@ -58,6 +59,7 @@ export default function Education() {
             onClick={addEducationHandler}
             className="button is-success"
           >
+            <FaPlusCircle className="mr-3" />
             {educations.length === 0
               ? "Add education"
               : "Add another education"}

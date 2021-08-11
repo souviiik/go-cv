@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { updateExperienceDetails } from "../../actions/details.actions";
 import Buttons from "../Buttons";
 import ExperienceFormPart from "./ExperienceFormPart";
+import { FaPlusCircle } from "react-icons/fa";
 
 export default function Experience() {
   const experienceDetailsFromStore = useSelector(
@@ -61,6 +62,7 @@ export default function Experience() {
             onClick={addExperienceHandler}
             className="button is-success"
           >
+            <FaPlusCircle className="mr-3" />
             {experiences.length === 0
               ? "Add experience"
               : "Add another experience"}

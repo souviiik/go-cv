@@ -3,6 +3,9 @@
     visibility: hidden;
     /* display: none; */
   }
+  #top-bar {
+    display: none;
+  }
   #section-to-print,
   #section-to-print * {
     visibility: visible;
@@ -11,6 +14,6 @@
   #section-to-print {
     position: absolute;
     left: 0;
-    top: 0 !important;
+    top: 0;
   }
 }

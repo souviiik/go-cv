@@ -1,3 +1,4 @@
+import { FaArrowCircleLeft, FaRegSave } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { submitDetails } from "../actions/details.actions";
@@ -39,7 +40,7 @@ export default function Buttons({ formData, targetAction }) {
             onClick={handlePrev}
             disabled={currentStep === 0}
           >
-            Prev
+            <FaArrowCircleLeft className="mr-3" /> Prev
           </button>
           {currentStep < MAX_STEPS - 1 ? (
             <button
@@ -47,7 +48,7 @@ export default function Buttons({ formData, targetAction }) {
               className="button is-primary mr-3"
               onClick={handleNext}
             >
-              Save & Continue
+              <FaRegSave className="mr-3" /> Save & Continue
             </button>
           ) : (
             <button
@@ -55,7 +56,7 @@ export default function Buttons({ formData, targetAction }) {
               className="button is-primary mr-3"
               onClick={handleSave}
             >
-              Save
+              <FaRegSave className="mr-3" /> Save
             </button>
           )}
         </div>

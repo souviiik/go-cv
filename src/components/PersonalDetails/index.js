@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
-import { updatePersonalDetails } from "../actions/details.actions";
-import Input from "../elements/Input";
-import Buttons from "./Buttons";
+import { updatePersonalDetails } from "../../actions/details.actions";
+import Input from "../../elements/Input";
+import Buttons from "../Buttons";
+// import { updatePersonalDetails } from "../actions/details.actions";
+// import Input from "../elements/Input";
+// import Buttons from "./Buttons";
 
 export default function PersonalDetails() {
   const personalDetailsfromStore = useSelector(
@@ -11,18 +14,20 @@ export default function PersonalDetails() {
 
   const initialState = personalDetailsfromStore || {
     name: "",
+    jobTitle: "",
+    profile: "",
     phone: "",
-    email: ""
+    email: "",
   };
 
   const [personalDetails, setPersonalDetails] = useState(initialState);
 
-  const { name, phone, email } = personalDetails;
+  const { name, jobTitle, profile, phone, email } = personalDetails;
 
   const handleChange = (e) => {
     setPersonalDetails({
       ...personalDetails,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -37,6 +42,19 @@ export default function PersonalDetails() {
           value={name}
           handleChange={handleChange}
         />
+        <Input
+          label="Job title"
+          type="text"
+          name="jobTitle"
+          value={jobTitle}
+          handleChange={handleChange}
+        />
+        <textarea
+          class="textarea"
+          name="profile"
+          value={profile}
+          onChange={handleChange}
+        ></textarea>
         <Input
           label="Phone"
           type="tel"

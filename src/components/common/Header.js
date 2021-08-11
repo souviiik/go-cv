@@ -4,7 +4,7 @@ import "./Header.css";
 
 const Header = () => {
   return (
-    <div className="container">
+    <div id="top-bar" className="container">
       <h1 className="title is-size-1">Freesume</h1>
       <p className="subtitle">Free Resume Builder</p>
       <hr />

@@ -9,7 +9,7 @@ export default function Candid() {
   const details = useSelector(({ details }) => details);
 
   return (
-    <div id="section-to-print" style={{ width: "100%" }}>
+    <>
       <div className="has-text-centered">
         <hr style={{ "border-top": "1px solid #1e1e1e" }} />
         <h1 className="title is-size-1 mb-5 is-uppercase">
@@ -73,6 +73,6 @@ export default function Candid() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

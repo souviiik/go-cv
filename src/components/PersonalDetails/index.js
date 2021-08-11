@@ -49,12 +49,15 @@ export default function PersonalDetails() {
           value={jobTitle}
           handleChange={handleChange}
         />
-        <textarea
-          class="textarea"
-          name="profile"
-          value={profile}
-          onChange={handleChange}
-        ></textarea>
+        <div className="control mb-3">
+          <label>Job Title: </label>
+          <textarea
+            class="textarea"
+            name="profile"
+            value={profile}
+            onChange={handleChange}
+          ></textarea>
+        </div>
         <Input
           label="Phone"
           type="tel"

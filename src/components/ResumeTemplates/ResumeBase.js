@@ -8,7 +8,6 @@ const ResumeBase = () => {
 
   return (
     <div className="container">
-      <Link to="/resume-templates">&lt; back</Link>
       <h2 className="title is-size-2">Candid</h2>
       {name === "candid" && <Candid />}
       <br />

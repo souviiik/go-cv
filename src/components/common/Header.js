@@ -24,6 +24,9 @@ const Header = () => {
           <NavLink className="navbar-item" to="/">
             Home
           </NavLink>
+          <NavLink className="navbar-item" to="/resume-templates">
+            Resume Templates
+          </NavLink>
         </div>
       </div>
     </nav>

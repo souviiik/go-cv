@@ -1,7 +1,6 @@
-import { FaArrowCircleLeft, FaRegSave } from "react-icons/fa";
+import { FaArrowCircleLeft, FaRegCheckCircle, FaRegSave } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { submitDetails } from "../actions/details.actions";
 import { nextStep, prevStep } from "../actions/steps.action";
 
 export default function Buttons({ formData, targetAction }) {
@@ -21,13 +20,7 @@ export default function Buttons({ formData, targetAction }) {
 
   const handleSave = () => {
     dispatchEvent(targetAction(formData));
-    // dispatchEvent(nextStep());
   };
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   dispatchEvent(submitDetails(store.details));
-  // };
 
   return (
     <>
@@ -65,7 +58,7 @@ export default function Buttons({ formData, targetAction }) {
       <div className="is-pulled-right">
         {currentStep === MAX_STEPS - 1 && (
           <Link className="button is-success" to="/resume-templates">
-            Create Resume
+            <FaRegCheckCircle className="mr-2" /> Create Resume
           </Link>
         )}
       </div>

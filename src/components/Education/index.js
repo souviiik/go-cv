@@ -31,8 +31,8 @@ export default function Education() {
         id: uuidv4(),
         degree: "",
         university: "",
-        yop: ""
-      }
+        yop: "",
+      },
     ]);
   };
 
@@ -45,13 +45,16 @@ export default function Education() {
     <div className="App">
       <h2 className="title is-size-2">Education Details</h2>
       <form>
-        {educations.map((education) => (
-          <EducationFormPart
-            key={education.id}
-            education={education}
-            handleChange={handleChange}
-            deleteEducation={deleteEducation}
-          />
+        {educations.map((education, i) => (
+          <fieldset class="box">
+            <legend class="subtitle is-3 has-text-link mb-0">{`Education ${i + 1}`}</legend>
+            <EducationFormPart
+              key={education.id}
+              education={education}
+              handleChange={handleChange}
+              deleteEducation={deleteEducation}
+            />
+          </fieldset>
         ))}
         <div>
           <button

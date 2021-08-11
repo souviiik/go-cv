@@ -2,26 +2,33 @@ import { FaTrashAlt } from "react-icons/fa";
 import Input from "../../elements/Input";
 
 const EducationFormPart = ({ education, handleChange, deleteEducation }) => {
-  const { id, degree, university, yop } = education;
+  const { id, degree, university, grade, yop } = education;
 
   const handleDelete = (_e, id) => {
     deleteEducation(id);
   };
 
   return (
-    <div className="pb-3 mb-5" style={{ borderBottom: "1px dashed #ccc" }}>
+    <div className="pb-3 mb-0">
       <Input
-        label="Degree/ Diploma"
+        label="Degree/ Course"
         type="text"
         name={`degree_${id}`}
         value={degree}
         handleChange={handleChange}
       />
       <Input
-        label="University"
+        label="School/ University"
         type="text"
         name={`university_${id}`}
         value={university}
+        handleChange={handleChange}
+      />
+      <Input
+        label="Grade/ Score"
+        type="text"
+        name={`grade_${id}`}
+        value={grade}
         handleChange={handleChange}
       />
       <div className="columns">

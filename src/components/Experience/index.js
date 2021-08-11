@@ -23,8 +23,8 @@ export default function Experience() {
         company: "",
         designation: "",
         joiningDate: "",
-        lastWorkDate: ""
-      }
+        lastWorkDate: "",
+      },
     ]);
   };
 
@@ -48,13 +48,18 @@ export default function Experience() {
     <div className="App">
       <h2 className="title is-size-2">Experience Details</h2>
       <form>
-        {experiences.map((experience) => (
-          <ExperienceFormPart
-            key={experience.id}
-            experience={experience}
-            handleChange={handleChange}
-            deleteExperience={deleteExperience}
-          />
+        {experiences.map((experience, i) => (
+          <fieldset class="box">
+            <legend class="subtitle is-3 has-text-link mb-0">{`Experience ${
+              i + 1
+            }`}</legend>
+            <ExperienceFormPart
+              key={experience.id}
+              experience={experience}
+              handleChange={handleChange}
+              deleteExperience={deleteExperience}
+            />
+          </fieldset>
         ))}
         <div>
           <button

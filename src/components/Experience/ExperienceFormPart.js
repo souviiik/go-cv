@@ -1,3 +1,4 @@
+import { FaTrashAlt } from "react-icons/fa";
 import Input from "../../elements/Input";
 
 const ExperienceFormPart = ({ experience, handleChange, deleteExperience }) => {
@@ -48,6 +49,7 @@ const ExperienceFormPart = ({ experience, handleChange, deleteExperience }) => {
             onClick={(e) => handleDelete(e, id)}
             className="button is-danger mt-5 is-fullwidth"
           >
+            <FaTrashAlt className="mr-3" />
             Delete
           </button>
         </div>

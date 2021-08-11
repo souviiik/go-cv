@@ -59,7 +59,7 @@ export default function Education() {
             onClick={addEducationHandler}
             className="button is-success"
           >
-            <FaPlusCircle className="mr-3" />
+            <FaPlusCircle className="mr-2" />
             {educations.length === 0
               ? "Add education"
               : "Add another education"}

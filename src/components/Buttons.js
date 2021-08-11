@@ -40,7 +40,7 @@ export default function Buttons({ formData, targetAction }) {
             onClick={handlePrev}
             disabled={currentStep === 0}
           >
-            <FaArrowCircleLeft className="mr-3" /> Prev
+            <FaArrowCircleLeft className="mr-2" /> Prev
           </button>
           {currentStep < MAX_STEPS - 1 ? (
             <button
@@ -48,7 +48,7 @@ export default function Buttons({ formData, targetAction }) {
               className="button is-primary mr-3"
               onClick={handleNext}
             >
-              <FaRegSave className="mr-3" /> Save & Continue
+              <FaRegSave className="mr-2" /> Save & Continue
             </button>
           ) : (
             <button
@@ -56,7 +56,7 @@ export default function Buttons({ formData, targetAction }) {
               className="button is-primary mr-3"
               onClick={handleSave}
             >
-              <FaRegSave className="mr-3" /> Save
+              <FaRegSave className="mr-2" /> Save
             </button>
           )}
         </div>

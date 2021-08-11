@@ -49,7 +49,7 @@ const ExperienceFormPart = ({ experience, handleChange, deleteExperience }) => {
             onClick={(e) => handleDelete(e, id)}
             className="button is-danger mt-5 is-fullwidth"
           >
-            <FaTrashAlt className="mr-3" />
+            <FaTrashAlt className="mr-2" />
             Delete
           </button>
         </div>

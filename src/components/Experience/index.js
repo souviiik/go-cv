@@ -62,7 +62,7 @@ export default function Experience() {
             onClick={addExperienceHandler}
             className="button is-success"
           >
-            <FaPlusCircle className="mr-3" />
+            <FaPlusCircle className="mr-2" />
             {experiences.length === 0
               ? "Add experience"
               : "Add another experience"}

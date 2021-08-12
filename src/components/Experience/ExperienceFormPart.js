@@ -54,7 +54,7 @@ const ExperienceFormPart = ({ experience, handleChange, deleteExperience }) => {
             <label>details: </label>
             <textarea
               class="textarea"
-              name="details"
+              name={`details_${id}`}
               value={details}
               onChange={handleChange}
             ></textarea>

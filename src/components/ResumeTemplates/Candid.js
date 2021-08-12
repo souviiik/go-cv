@@ -1,6 +1,6 @@
 import moment from "moment";
 import React from "react";
-import { FaPhoneAlt, FaRegEnvelope } from "react-icons/fa";
+import { FaMapMarkerAlt, FaPhoneAlt, FaRegEnvelope } from "react-icons/fa";
 
 import "./Candid.css";
 
@@ -32,35 +32,92 @@ export default function Candid({
         <p className="subtitle is-size-5 has-text-black">{jobTitle}</p>
         <hr style={{ "border-top": "1px solid #1e1e1e" }} />
         <h2 className="title is-size-5 is-uppercase">Profile</h2>
-        <div className="columns is-centered">
+        <div className="columns is-centered mb-5">
           <div className="column is-four-fifths">
             <p>{profile}</p>
           </div>
         </div>
-        <hr style={{ "border-top": "1px solid #1e1e1e" }} />
       </div>
       <div>
         <div className="columns">
-          <div className="column is-one-third">
-            <h2 className="title is-size-5 is-uppercase">Contact</h2>
+          <div
+            className="column is-one-third pr-0"
+            style={{
+              "border-top": "1px solid #1e1e1e",
+              "margin-top": "15px",
+              "border-right": "solid 1px black",
+              "margin-top": "12px",
+            }}
+          >
+            <h2
+              className="title is-size-5 is-uppercase has-text-centered"
+              style={{
+                "border-bottom": "solid 1px black",
+                "padding-bottom": "12px",
+              }}
+            >
+              Contact
+            </h2>
             <ul>
-              <li>
+              <li style={{ paddingBottom: "14px" }}>
                 <FaRegEnvelope className="mr-2" />
                 {email}
               </li>
-              <li>
+              <li style={{ paddingBottom: "14px" }}>
                 <FaPhoneAlt className="mr-2" />
                 {phone}
               </li>
+              <li>
+                <FaMapMarkerAlt className="mr-2" />
+                {address}
+              </li>
             </ul>
+            <h2
+              className="title is-size-5 is-uppercase has-text-centered mt-5"
+              style={{
+                "border-top": "solid 1px black",
+                "border-bottom": "solid 1px black",
+                "padding-top": "12px",
+                "padding-bottom": "12px",
+              }}
+            >
+              Educations
+            </h2>
+            <div>
+              {educationDetails.map((edd) => (
+                <div className="mb-5 ">
+                  <div className="has-text-centered mb-3">
+                    <h3 className="title is-size-5 mb-3">
+                      {edd.degree}, {edd.yop}
+                    </h3>
+                    <p className="subtitle mt-3 mb-0 has-text-black">
+                      {edd.university}
+                    </p>
+                    <p>
+                      <strong>Grade/ Score</strong>: {edd.grade}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
-          <div className="column is-two-thirds">
-            <h2 className="title is-size-5 is-uppercase has-text-centered">
+
+          <div
+            className="column is-two-thirds pl-0"
+            style={{ "border-top": "1px solid #1e1e1e", "margin-top": "12px" }}
+          >
+            <h2
+              className="title is-size-5 is-uppercase has-text-centered"
+              style={{
+                "border-bottom": "solid 1px black",
+                "padding-bottom": "12px",
+              }}
+            >
               Experiences
             </h2>
             <div>
               {experienceDetails.map((exd) => (
-                <div className="mb-5 ">
+                <div className="mb-5 pl-5">
                   <div className="has-text-centered">
                     <h3 className="title is-size-5 mb-3">
                       {exd.designation} at {exd.company}
@@ -73,12 +130,7 @@ export default function Candid({
                       {moment(exd.lastWorkDate).format("D MMMM, YYYY")}
                     </h4>
                   </div>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-                    feugiat turpis quam, non aliquam felis auctor vel.
-                    Vestibulum pellentesque, nibh sit amet sagittis semper, ante
-                    quam aliquam nunc, a vulputate nulla leo nec massa.
-                  </p>
+                  <p>{exd.details}</p>
                 </div>
               ))}
             </div>
